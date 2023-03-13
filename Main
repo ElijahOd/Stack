@@ -22,9 +22,9 @@ namespace ConsoleApp
                 Console.WriteLine("6 - Вийти з кухні");
     
                 Console.Write("Введіть дію: ");
-                string Action = Console.ReadLine();
+                string action = Console.ReadLine();
     
-                if (Action == "1")
+                if (action == "1")
                 {
                     Console.Write("Підпишіть стаканчик: ");
                     string name = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace ConsoleApp
                     Console.WriteLine($"Ви успішно додали стаканчик у стек. Кількість стаканчіків {cups.Count}");
                     Console.WriteLine();
                 }
-                else if (Action == "2")
+                else if (action == "2")
                 {
                     if (cups.Count == 0)
                     {
@@ -46,7 +46,7 @@ namespace ConsoleApp
                     }
                     Console.WriteLine();
                 }
-                else if (Action == "3")
+                else if (action == "3")
                 {
                     if (cups.Count == 0)
                     {
@@ -58,7 +58,7 @@ namespace ConsoleApp
                     }
                     Console.WriteLine();
                 }
-                else if (Action == "4")
+                else if (action == "4")
                 {
                     if (cups.Count == 0)
                     {
@@ -75,7 +75,7 @@ namespace ConsoleApp
                     }
                     Console.WriteLine();
                 }
-                else if (Action == "5")
+                else if (action == "5")
                 {
                     if (cups.Count == 0)
                     {
@@ -88,7 +88,7 @@ namespace ConsoleApp
                     }
                     Console.WriteLine();
                 }
-                else if (Action == "6")
+                else if (action == "6")
                 {
                     Console.WriteLine("Гарного дня!");
                     break;

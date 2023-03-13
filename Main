@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            Stack<string> cups = new Stack<string>();
+    
+            while (true)
+            {
+                Console.WriteLine("1 - Додати стаканчик");
+                Console.WriteLine("2 - Прибрати стаканчик");
+                Console.WriteLine("3 - Верхній стаканчик у стеку");
+                Console.WriteLine("4 - Вивести весь стек");
+                Console.WriteLine("5 - Очистити стек");
+                Console.WriteLine("6 - Вийти з кухні");
+    
+                Console.Write("Введіть дію: ");
+                string Action = Console.ReadLine();
+    
+                if (Action == "1")
+                {
+                    Console.Write("Підпишіть стаканчик: ");
+                    string name = Console.ReadLine();
+                    cups.Push(name);
+                    Console.WriteLine($"Ви успішно додали стаканчик у стек. Кількість стаканчіків {cups.Count}");
+                    Console.WriteLine();
+                }
+                else if (Action == "2")
+                {
+                    if (cups.Count == 0)
+                    {
+                        Console.WriteLine("В стеку відсутні стаканчики. Спочатку додайте стаканчик");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ви прибрали стаканчик зі стеку");
+                        cups.Pop();
+                        Console.WriteLine($"Кількість стаканчіків у стеку {cups.Count}");
+                    }
+                    Console.WriteLine();
+                }
+                else if (Action == "3")
+                {
+                    if (cups.Count == 0)
+                    {
+                        Console.WriteLine("В стеку відсутні стаканчики. Спочатку додайте стаканчик");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"На стаканчику написано: '{cups.Peek()}'");
+                    }
+                    Console.WriteLine();
+                }
+                else if (Action == "4")
+                {
+                    if (cups.Count == 0)
+                    {
+                        Console.WriteLine("В стеку відсутні стаканчики. Спочатку додайте стаканчик");
+                    }
+                    else
+                    {
+                        Console.Write($"Надписи на стаканчиках: ");
+                        foreach (string result in cups)
+                        {
+                            Console.Write($"'{result}', ");
+                        }
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+                }
+                else if (Action == "5")
+                {
+                    if (cups.Count == 0)
+                    {
+                        Console.WriteLine("В стеку відсутні стаканчики. Спочатку додайте стаканчик");
+                    }
+                    else
+                    {
+                        cups.Clear();
+                        Console.WriteLine($"Ви все викинули! В стеку {cups.Count} стаканчиків");
+                    }
+                    Console.WriteLine();
+                }
+                else if (Action == "6")
+                {
+                    Console.WriteLine("Гарного дня!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Нажаль, немає такої дії");
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}

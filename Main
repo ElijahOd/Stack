@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class Program
+    class ProgramStack
     {
         static void Main()
         {
@@ -42,7 +42,7 @@ namespace ConsoleApp
                     {
                         Console.WriteLine("Ви прибрали стаканчик зі стеку");
                         cups.Pop();
-                        Console.WriteLine($"Кількість стаканчіків у стеку {cups.Count}");
+                        Console.WriteLine($"Кількість стаканчіків у стеку: {cups.Count}");
                     }
                     Console.WriteLine();
                 }
